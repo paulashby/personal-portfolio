@@ -1,5 +1,6 @@
 :root {
-  --accent: rgb(107, 210, 212);
+  --accent: rgb(154, 227, 222);
+  --dusty-blue: rgb(73, 115, 153);
   --darkness: rgb(46, 58, 58);
 }
 
@@ -27,6 +28,10 @@ p {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 header {
   background-color: var(--accent);
   display: flex;
@@ -34,14 +39,20 @@ header {
   flex-wrap: wrap;
 }
 
-header h1 {
+h1 {
   color: var(--darkness);
-  text-align: center;
   font-size: 3rem;
   margin-bottom: -1.2rem;
+  text-align: center;
 }
 
 /* Navigation elements */
+nav ul,
+.contact ul {
+  list-style: none;
+  padding: 0;
+}
+
 nav ul {
   align-items: center;
   background-color: var(--darkness);
@@ -50,9 +61,7 @@ nav ul {
   gap: 1rem;
   height: 2.5rem;
   justify-content: center;
-  list-style: none;
   margin-bottom: 0;
-  padding: 0;
 }
 nav li {
   border-bottom: solid 3px var(--accent);
@@ -60,26 +69,103 @@ nav li {
 
 nav a {
   color: var(--accent);
-  text-decoration: none;
 }
 
 /* Hero */
 .hero-banner {
-  width: 100%;
-  height: 12rem;
+  align-items: flex-end;
+  background-blend-mode: multiply;
   background-color: rgb(148, 203, 239);
   background-image: url("../images/02-hero-bg.jpg");
-  background-size: cover;
   background-position: center;
-  background-blend-mode: multiply;
+  background-size: cover;
   display: flex;
   flex-direction: row;
+  height: 12rem;
   justify-content: center;
-  align-items: flex-end;
+  width: 100%;
 }
 
 .hero-banner h2 {  
   background-color: var(--accent);
-  padding: 0.1rem 0.4rem;
+  border-bottom: none;
+  color: var(--darkness);
+  font-size: 1.55rem;
   margin-bottom: 0.5rem;
+  padding: 0.1rem 0.4rem;
+}
+
+main,
+footer {
+  color: var(--dusty-blue);
+  margin: 0 auto;
+  width: 90%;
+}
+
+h2 {
+  border-bottom: solid 3px var(--dusty-blue);
+  font-size: 1.7rem;
+  margin: 1rem 0;
+}
+
+main p {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+figure {
+  background-color: #000;
+  color: var(--darkness);
+  border: solid 3px var(--accent);
+  height: 7rem;
+  margin:  0 0 0.5rem;
+  position: relative;
+}
+
+figure img {
+  height: 100%;
+  object-fit: cover;
+  object-position: 0 0;
+  opacity: 0.6;
+}
+
+figcaption {
+  background-color: var(--accent);
+  padding: 0.5rem;
+  position: absolute;
+  bottom: 0.7rem;
+  z-index: 1;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+figcaption span {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+main img {
+  width: 100%;
+}
+
+#contact li {
+  margin-bottom: 0.5rem;
+}
+#contact a {
+  color: var(--dusty-blue);
+  border-bottom: solid 3px var(--dusty-blue);
+  padding-bottom: 0.25rem;
+}
+
+#contact a,
+#cv a {
+  color: var(--dusty-blue);
+  border-bottom: solid 3px var(--dusty-blue);
+  padding-bottom: 0.25rem;
+}
+
+footer {
+  padding-bottom: 3rem;
 }
