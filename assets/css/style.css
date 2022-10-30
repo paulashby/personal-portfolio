@@ -44,7 +44,7 @@ header {
 /* Guide */
 
 .guide {
-  background-image: url("https://www.primitive.co/fed/guides/mob.jpg");
+  background-image: url("https://www.primitive.co/fed/guides/desktop.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   width: 100vw;
@@ -53,7 +53,7 @@ header {
   top: 0;
   opacity: 0.2;
   z-index: 1000;
-  /* display: none; */
+  display: none;
 }
 
 /* End Guide */
@@ -150,6 +150,7 @@ main p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  column-gap: 2%;
 }
 
 figure {
@@ -157,7 +158,6 @@ figure {
   background-color: #000;
   color: var(--darkness);
   border: solid 3px var(--accent);
-  /* height: 7rem; */
   margin:  0 0 0.85rem;
   position: relative;
 }
@@ -166,6 +166,7 @@ figure:first-child {
   margin-top: 1rem;
 }
 
+/* a element contains img element - overflow: hidden allows us to crop non-proportionally */
 figure a {
   display: block;
   height: 6.5rem;
@@ -174,31 +175,36 @@ figure a {
 
 figure img {
   height: 100%;
-  object-fit: cover;
-  object-position: 0 0;
   opacity: 0.6;
 }
 
+/* Project image crops */
+#project1 img {
+  transform: scale(4);
+  object-position: 50px -8.5px;
+}
+
 #project2 img {
-  transform: scale(1.75);
-  object-position: 60px 15px;
+  transform: scale(5);
+  object-position: 50px 15px;
 }
 
 #project3 img {
-  transform: scale(1.65);
-  object-position: 60px 15px;
+  transform: scale(4.6);
+  object-position: 50px 40px;
 }
 
 #project4 img {
-  transform: scale(1.0);
-  object-position: 0px -115px;
+  transform: scale(4.6);
+  object-position: 45px 31px;
 }
 
 #project5 img {
-  transform: scale(1.5);
-  object-position: 65px 16px;
+  transform: scale(3.15);
+  object-position: 62.5px 35px;
 }
 
+/* figcaptions are rendered as title tabs */
 figcaption {
   background-color: var(--accent);
   padding: 0.5rem 1rem;
@@ -210,14 +216,11 @@ figcaption {
   line-height: 1.4;
 }
 
+/* Place project tech details on separate line */
 figcaption span {
   display: block;
   font-size: 0.8rem;
   font-weight: 400;
-}
-
-main img {
-  width: 100%;
 }
 
 #contact li {
@@ -233,9 +236,10 @@ main img {
 #cv a {
   color: var(--dusty-blue);
   border-bottom: solid 3px var(--dusty-blue);
-  padding-bottom: 0.25rem;
+  padding: 0 0.3rem 0.25rem;
 }
 
+/* Add white space at bottom of page */
 footer {
   padding-bottom: 3rem;
 }
@@ -247,28 +251,100 @@ footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 5%;
+    gap: 3%;
   }
 
+  footer section {
+    align-items: center;
+  }
+
+  header {
+    /* Use wide layout syle */
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--darkness);
+    height: 5.5rem;
+  }
+
+  h1 {
+    background-color: var(--accent);
+    margin-top: 0.9rem;
+    font-size: 3.5rem;
+    line-height: 1;
+    height: 3.9rem;
+    padding: 0 1rem 0 5rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+  
   h3 {
-    flex: 0 0 15%;
+    font-size: 3.5rem;
+    flex: 0 0 20%;
     text-align: right;
     border-bottom: none;
     border-right: solid 3px var(--dusty-blue);
-    padding-right: 0.5rem;
+    padding: 0.5rem 1rem 2rem 0;
+    line-height: 1;
+  }
+
+  #about h3 {
+    padding-top: 0;
+  }
+
+  nav {
+    align-self: flex-end;
+    font-size: 1.1rem;
+    padding: 0 5rem 1rem 0;    
+  }
+
+  .hero-banner {
+    justify-content: flex-end;
+    justify-content: flex-end;
+    padding: 0 5rem 1.3rem 0;
+  }
+
+  main {
+    margin-top: 0.6rem;
+  }
+
+  #work {
+    margin-top: -1rem;
+  }
+
+  #work .section-content {
+    margin-top: 2.2rem;
   }
 
   .section-content {
-    flex: 0 0 80%;
+    flex: 0 0 77%;
   }
-
-  #contact ul {
+  
+  footer .section-content {
     display: flex;
     justify-content: space-around;
   }
 
-  #cv .section-content {
-    text-align: center;
+  figure {
+    flex: 0 1 48%;
+  }
+
+  figure:first-child {
+    flex: 0 1 98.5%;
+  }
+
+  figure a {
+    height: 7rem;
+  }
+
+  #project1 a {
+    height: 19.5rem
+  }
+
+  /* Project image crops */
+  #project1 img {
+    object-position: 68px -25px;
   }
 
 }
