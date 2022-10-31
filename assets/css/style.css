@@ -4,6 +4,7 @@
   --darkness: rgb(46, 58, 58);
 }
 
+/* Reset */
 * {
   box-sizing: border-box;
 }
@@ -26,6 +27,11 @@ h6 {
 
 p {
   margin: 0;
+}
+/* End Reset */
+
+body {
+  min-width: 320px;;
 }
 
 a {
@@ -78,6 +84,10 @@ nav ul,
   padding: 0;
 }
 
+nav {
+  font-size: 0.9rem;
+}
+
 nav ul {
   align-items: center;
   background-color: var(--darkness);
@@ -119,7 +129,7 @@ footer {
   width: 88%;
 }
 
-main p {
+#about p {
   font-size: 0.8rem;
   font-weight: 600;
   line-height: 1.4;
@@ -140,6 +150,7 @@ figure {
   color: var(--darkness);
   flex: 0 1 97%;
   margin:  0 0 0.85rem;
+  overflow: hidden;
   position: relative;
 }
 
@@ -150,43 +161,43 @@ figure:first-child {
 /* a element contains img element - overflow: hidden allows us to crop non-proportionally */
 figure a {
   display: block;
-  height: 6.5rem;
-  overflow: hidden;
-}
-
-figure a:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+  height: 23vw;
 }
 
 figure img {
-  height: 100%;
+  /* height: 100%; */
   opacity: 0.6;
+  height: auto;
+  position: absolute;
 }
 
-/* Project image crops */
+figure img:hover {
+  opacity: 1;
+}
+
+/* Project image crops - scale with viewport width */
 #project1 img {
-  object-position: 50px -8.5px;
-  transform: scale(4);
+  bottom: -28vw;
+  width: 140vw;
 }
 
 #project2 img {
-  object-position: 50px 15px;
-  transform: scale(5);
+  width: 140vw;
 }
 
 #project3 img {
-  object-position: 50px 40px;
-  transform: scale(4.6);
+  left: -8vw;
+  width: 140vw;
 }
 
 #project4 img {
-  object-position: 45px 31px;
-  transform: scale(4.6);
+  bottom: -28.5vw;
+  left: -85vw;
+  width: 180vw;
 }
 
 #project5 img {
-  object-position: 62.5px 35px;
-  transform: scale(3.15);
+  width: 125.5vw;
 }
 
 /* figcaptions are rendered as title tabs */
@@ -227,6 +238,27 @@ figcaption span {
 /* Add white space at bottom of page */
 footer {
   padding-bottom: 3rem;
+}
+
+@media only screen and (min-width: 340px) {
+  nav {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 580px) {
+
+  #about .section-content {
+    display: flex;
+    gap: 2%;
+  }
+
+  #about p {
+    flex: 0 1 49%;
+    /* Allow a little more space to left of gutter */
+    padding-right: 0.75rem;
+  }
+
 }
 
 @media only screen and (min-width: 850px) {
@@ -317,11 +349,11 @@ footer {
   }
 
   figure {
-    flex: 0 1 48%;
+    flex: 0 1 49%;
   }
 
   figure:first-child {
-    flex: 0 1 98.5%;
+    flex: 0 1 100%;
   }
 
   figure a {
@@ -332,9 +364,31 @@ footer {
     height: 19.5rem
   }
 
-  /* Project image crops */
+  /* Project image crops - scale with viewport width */
   #project1 img {
-    object-position: 68px -25px;
+    bottom: -28vw;
+    width: 140vw;
+    right: -60vw;
+  }
+
+  #project2 img {
+    left: -10.5vw;
+    width: 80vw;
+  }
+
+  #project3 img {
+    left: 0;
+    width: 49vw;
+  }
+
+  #project4 img {
+    bottom: -11.5vw;
+    left: -33vw;
+    width: 70vw;
+  }
+
+  #project5 img {
+    width: 49vw;
   }
 }
 
@@ -342,4 +396,31 @@ footer {
   h3 {
     font-size: 3.5rem
   }
+
+  /* Fixed width container - use absolute image sizes based on dev tools computed sizes */
+  #project1 img {
+    bottom: -392px;
+    width: 1959px;
+    right: -839px;
+  }
+
+  #project2 img {
+    left: -147px;
+    width: 1119px;
+  }
+
+  #project3 img {
+    width: 686px;
+  }
+
+  #project4 img {
+    bottom: -161px;
+    left: -462px;
+    width: 979px;
+  }
+
+  #project5 img {
+    width: 686px;
+  }
+  
 }
