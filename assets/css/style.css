@@ -158,14 +158,12 @@ figure:first-child {
   margin-top: 1rem;
 }
 
-/* a element contains img element - overflow: hidden allows us to crop non-proportionally */
 figure a {
   display: block;
   height: 23vw;
 }
 
 figure img {
-  /* height: 100%; */
   opacity: 0.6;
   height: auto;
   position: absolute;
