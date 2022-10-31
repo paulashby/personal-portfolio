@@ -66,8 +66,8 @@ h2 {
 }
 
 h3 {
-  font-size: 2rem;
   border-bottom: solid 3px var(--dusty-blue);
+  font-size: 2rem;
   margin: 2.5rem 0 0.5rem;
 }
 
@@ -128,17 +128,17 @@ main p {
 
 /* Work samples */
 #work .section-content {
+  column-gap: 2%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  column-gap: 2%;
 }
 
 figure {
-  flex: 0 1 97%;
   background-color: #000;
-  color: var(--darkness);
   border: solid 3px var(--accent);
+  color: var(--darkness);
+  flex: 0 1 97%;
   margin:  0 0 0.85rem;
   position: relative;
 }
@@ -165,40 +165,40 @@ figure img {
 
 /* Project image crops */
 #project1 img {
-  transform: scale(4);
   object-position: 50px -8.5px;
+  transform: scale(4);
 }
 
 #project2 img {
-  transform: scale(5);
   object-position: 50px 15px;
+  transform: scale(5);
 }
 
 #project3 img {
-  transform: scale(4.6);
   object-position: 50px 40px;
+  transform: scale(4.6);
 }
 
 #project4 img {
-  transform: scale(4.6);
   object-position: 45px 31px;
+  transform: scale(4.6);
 }
 
 #project5 img {
-  transform: scale(3.15);
   object-position: 62.5px 35px;
+  transform: scale(3.15);
 }
 
 /* figcaptions are rendered as title tabs */
 figcaption {
   background-color: var(--accent);
-  padding: 0.5rem 1rem;
-  position: absolute;
   bottom: 1rem;
-  z-index: 1;
   font-size: 1.1rem;
   font-weight: 600;
   line-height: 1.4;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  z-index: 1;
 }
 
 /* Place project tech details on separate line */
@@ -212,15 +212,15 @@ figcaption span {
   margin-bottom: 0.5rem;
 }
 #contact a {
-  color: var(--dusty-blue);
   border-bottom: solid 3px var(--dusty-blue);
+  color: var(--dusty-blue);
   padding-bottom: 0.25rem;
 }
 
 #contact a,
 #cv a {
-  color: var(--dusty-blue);
   border-bottom: solid 3px var(--dusty-blue);
+  color: var(--dusty-blue);
   padding: 0 0.3rem 0.25rem;
 }
 
@@ -245,18 +245,18 @@ footer {
 
   header {
     /* Use wide layout syle */
-    flex-direction: row;
-    justify-content: space-between;
     background-color: var(--darkness);
+    flex-direction: row;
     height: 5.5rem;
+    justify-content: space-between;
   }
 
   h1 {
     background-color: var(--accent);
-    margin-top: 0.9rem;
     font-size: 3.5rem;
-    line-height: 1;
     height: 3.9rem;
+    line-height: 1;
+    margin-top: 0.9rem;
     padding: 0 1rem 0 5rem;
   }
 
@@ -265,13 +265,14 @@ footer {
   }
   
   h3 {
-    font-size: 4vw;
-    flex: 0 0 20%;
-    text-align: right;
     border-bottom: none;
     border-right: solid 3px var(--dusty-blue);
-    padding: 0.5rem 1rem 2rem 0;
+    flex: 0 0 20%;
+    /* Scale font with viewport width */
+    font-size: 4vw;
     line-height: 1;
+    padding: 0.5rem 1rem 2rem 0;
+    text-align: right;
   }
 
   #about h3 {
@@ -285,7 +286,6 @@ footer {
   }
 
   .hero-banner {
-    justify-content: flex-end;
     justify-content: flex-end;
     padding: 0 5rem 1.3rem 0;
   }
