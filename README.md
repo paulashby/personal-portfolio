@@ -17,7 +17,7 @@ This task was set as part of [the Trilogy Skills Bootcamp in Front-End Web Devel
 
 For the purposes of the exercise, the project links point at [the Primitive website](https://primitive.co) which is my own current online presence.
 
-[The project](https://paulashby.github.io/personal-portfolio) has been deployed on GitHub Pages.
+The project has been [deployed on GitHub Pages](https://paulashby.github.io/personal-portfolio).
 
 ## Installation
 
