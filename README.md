@@ -21,7 +21,7 @@ For the purposes of the exercise, the project links point at [the Primitive webs
 
 ## Installation
 
-If for any reason you would like to deploy the website yourself, simply fork this repository, go to the Settings page of your fork on GitHub, select <kbd>Pages</kbd> and set the <kbd>Branch</kbd> dropdown to <kbd>master</kbd>.
+If for any reason you would like to deploy the website yourself, simply fork this repository, go to the Settings page of your fork on GitHub, select <kbd>Pages</kbd> and set the <kbd>Branch</kbd> dropdown to <kbd>main</kbd>.
 
 ## Usage
 
